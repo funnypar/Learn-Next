@@ -2,6 +2,7 @@ import Link from "next/link";
 import logo from "@/assets/logo.png";
 import styles from "./mainHeader.module.css";
 import Image from "next/image";
+import NavLink from "./navLink";
 
 const MainHeader = () => {
     return (
@@ -10,16 +11,7 @@ const MainHeader = () => {
                 <Image src={logo} alt="logo" priority />
                 Nextlevel Food
             </Link>
-            <nav className={styles.nav}>
-                <ul>
-                    <li>
-                        <Link href="/meals">Browser Meals</Link>
-                    </li>
-                    <li>
-                        <Link href="/community">Foodies Community</Link>
-                    </li>
-                </ul>
-            </nav>
+            <NavLink />
         </header>
     );
 };
